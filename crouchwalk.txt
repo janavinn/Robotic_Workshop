@@ -1,0 +1,48 @@
+from time import sleep
+from ROBOT_ACTIONS import move_servo
+
+def crouch_walk():
+    # --- Base crouch ---
+    move_servo(0, 90)
+    move_servo(1, 0)
+    move_servo(2, 180)
+    move_servo(3, 90)
+    move_servo(4, 135)
+    move_servo(5, 135)
+    move_servo(6, 45)
+    move_servo(7, 55)
+    sleep(0.4)
+
+    while True:
+        # ===== Phase A: front-left + back-right =====
+        move_servo(5, 120)   # front-left upper - lift
+        move_servo(7, 75)    # back-right upper - lift
+        sleep(0.18)
+
+        move_servo(1, 18)    # front-left forward
+        move_servo(3, 84)    # back-right backward
+        sleep(0.25)
+
+        move_servo(5, 135)
+        move_servo(7, 55)
+        sleep(0.22)
+
+        sleep(0.08)
+
+        # ===== Phase B: front-right + back-left =====
+        move_servo(6, 60)    # front-right upper - lift
+        move_servo(4, 120)   # back-left upper - lift
+        sleep(0.18)
+
+        move_servo(2, 162)   # front-right forward
+        move_servo(0, 108)   # back-left backward
+        sleep(0.25)
+
+        move_servo(6, 45)
+        move_servo(4, 135)
+        sleep(0.22)
+
+        sleep(0.08)
+
+# --- Call the walk function ---
+crouch_walk()

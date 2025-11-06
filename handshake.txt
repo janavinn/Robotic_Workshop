@@ -1,0 +1,118 @@
+from time import sleep
+from ROBOT_ACTIONS import move_servo
+
+def handshake():
+    move_servo(0, 150)  # back-left lower
+    move_servo(1, 45)   # front-left lower
+    move_servo(2, 140)  # front-right lower
+    move_servo(3, 45)   # back-right lower
+    move_servo(4, 90)   # back-left upper
+    move_servo(5, 90)   # front-left upper
+    move_servo(6, 90)   # front-right upper
+    move_servo(7, 90)   # back-right upper
+
+    sleep(1)
+
+    move_servo(0, 90)  # back-left lower
+    move_servo(4, 135)   # back-left upper
+    move_servo(7, 55)   # back-right upper
+    move_servo(3, 90)   # back-right lower
+
+    sleep(1)
+
+    '''move_servo(0, 60)
+    move_servo(3, 120)
+    sleep(1)'''
+
+    move_servo(4, 155)   # back-left upper
+    move_servo(7, 25)   # back-right upper
+    sleep(1)
+
+    move_servo(0, 10)
+    move_servo(3, 170)
+    sleep(1)
+
+    move_servo(1, 45)   # front-left lower
+    move_servo(5, 90)   # front-left upper
+    move_servo(6, 90)   # front-right upper
+    move_servo(2, 140)  # front-right lower
+    sleep(1)
+
+    move_servo(0, 0)
+    move_servo(3, 180)
+    sleep(1)
+
+    move_servo(4, 150)   # back-left upper
+    move_servo(7, 30)   # back-right upper
+    sleep(1)
+
+    move_servo(1, 90)   # front-left lower
+    move_servo(2, 90)  # front-right lower
+    sleep(1)
+
+    move_servo(4, 180)
+    move_servo(7, 0)
+    sleep(1)
+
+    move_servo(5, 0)   # front-left upper
+    move_servo(2, 160)
+    move_servo(1, 90)   # front-left lower
+    move_servo(2, 100)
+
+    move_servo(1, 45)   # move servo 5 to 70°
+    sleep(0.5)
+    move_servo(1, 90)   # move servo 5 back to 90°
+    sleep(0.5)
+
+    move_servo(1, 45)   # move servo 5 to 70°
+    sleep(0.5)
+    move_servo(1, 90)   # move servo 5 back to 90°
+    sleep(0.5)
+
+    move_servo(1, 45)   # move servo 5 to 70°
+    sleep(0.5)
+    move_servo(1, 90)   # move servo 5 back to 90°
+    sleep(0.5)
+
+    move_servo(5, 90)   # front-left upper
+    sleep(1)
+
+    '''move_servo(1, 45)   # front-left lower
+    move_servo(5, 90)   # front-left upper
+    move_servo(6, 90)   # front-right upper
+    move_servo(2, 140)  # front-right lower'''
+
+    sleep(1)
+
+    move_servo(0, 60)
+    move_servo(4, 120)
+    move_servo(3, 110)
+    move_servo(7, 55)
+
+    move_servo(4, 125)
+    move_servo(7, 55)
+    sleep(1)
+    move_servo(0, 90)
+    move_servo(3, 90)
+
+    move_servo(0, 90)  # back-left lower
+    move_servo(1, 0)   # front-left lower
+    move_servo(2, 180)  # front-right lower
+    move_servo(3, 90)   # back-right lower
+    move_servo(4, 135)   # back-left upper
+    move_servo(5, 135)   # front-left upper
+    move_servo(6, 45)   # front-right upper
+    move_servo(7, 55)   # back-right upper
+
+    move_servo(0, 150)  # back-left lower
+    move_servo(1, 45)   # front-left lower
+    move_servo(2, 140)  # front-right lower
+    move_servo(3, 45)   # back-right lower
+    move_servo(4, 90)   # back-left upper
+    move_servo(5, 90)   # front-left upper
+    move_servo(6, 90)   # front-right upper
+    move_servo(7, 90)   # back-right upper
+
+# Call the handshake function
+handshake()
+

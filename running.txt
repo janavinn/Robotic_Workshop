@@ -1,0 +1,49 @@
+from time import sleep
+from ROBOT_ACTIONS import move_servo
+
+
+# --- Standing position ---
+move_servo(0, 150)
+move_servo(1, 45)
+move_servo(2, 140)
+move_servo(3, 45)
+move_servo(4, 90)
+move_servo(5, 90)
+move_servo(6, 90)
+move_servo(7, 90)
+sleep(0.2)
+
+while True:
+    # Step 1: front-right + back-left
+    move_servo(6, 125)
+    move_servo(4, 75)
+    sleep(0.05)
+
+    move_servo(2, 125)
+    move_servo(0, 135)
+    sleep(0.08)
+
+    move_servo(6, 90)
+    move_servo(4, 90)
+    sleep(0.05)
+
+    # Step 2: front-left + back-right
+    move_servo(5, 75)
+    move_servo(7, 115)
+    sleep(0.05)
+
+    move_servo(1, 60)
+    move_servo(3, 60)
+    sleep(0.08)
+
+    move_servo(5, 90)
+    move_servo(7, 90)
+    sleep(0.05)
+
+    # Reset pose
+    move_servo(0, 150)
+    move_servo(1, 45)
+    move_servo(2, 140)
+    move_servo(3, 45)
+    sleep(0.1)
+

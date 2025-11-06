@@ -1,0 +1,30 @@
+from time import sleep
+from ROBOT_ACTIONS import move_servo
+
+def stand():
+    move_servo(0, 150)
+    move_servo(1, 45)
+    move_servo(2, 140)
+    move_servo(3, 45)
+    move_servo(4, 90)
+    move_servo(5, 90)
+    move_servo(6, 90)
+    move_servo(7, 90)
+    print("STAND")
+
+def crouch():
+    move_servo(0, 90)
+    move_servo(1, 0)
+    move_servo(2, 180)
+    move_servo(3, 90)
+    move_servo(4, 135)
+    move_servo(5, 135)
+    move_servo(6, 45)
+    move_servo(7, 55)
+    print("CROUCH")
+
+while True:
+    stand()
+    sleep(3)
+    crouch()
+    sleep(3)

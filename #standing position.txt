@@ -1,0 +1,21 @@
+#standing position
+from time import sleep
+from ROBOT_ACTIONS import move_servo
+
+# Standing position
+move_servo(0, 150)  # back-left lower
+move_servo(1, 45)   # front-left lower
+move_servo(2, 140)  # front-right lower
+move_servo(3, 45)   # back-right lower
+move_servo(4, 90)   # back-left upper
+move_servo(5, 90)   # front-left upper
+move_servo(6, 90)   # front-right upper
+move_servo(7, 90)   # back-right upper
+
+print("Robot is now in standing position")
+
+# Optional: keep it steady
+while True:
+    sleep(1)
+
+
